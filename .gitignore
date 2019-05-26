@@ -1,4 +1,6 @@
-.out*
+*.out
+*.o
 palindrome
 cmdline
 renverse
+fouille

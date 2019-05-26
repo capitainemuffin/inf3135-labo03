@@ -2,7 +2,7 @@ OPTIONS = -Wall
 
 default: all
 
-all : cmdline renverse palindrome
+all : cmdline renverse palindrome fouille
 
 cmdline: cmdline.o
 	gcc $(OPTIONS) -o cmdline cmdline.o
@@ -22,10 +22,17 @@ palindrome : palindrome.o
 palindrome.o : palindrome.c
 	gcc $(OPTIONS) -c -o palindrome.o palindrome.c
 
+fouille : fouille.o
+	gcc $(OPTIONS) -o fouille fouille.o
+
+fouille.o : fouille.c
+	gcc $(OPTIONS) -c -o fouille.o fouille.c 
+
 clean : 
 	rm -f palindrome
 	rm -f renverse
 	rm -f cmdline
+	rm -f fouille
 	rm -f *.out
 	rm -f *.o
 
